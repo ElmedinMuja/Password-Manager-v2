@@ -159,69 +159,6 @@ def decryptor(password_to_decrypt):
     return decrypted_string
 
 
-########################################
-########## ARCHIVED ###############
-########################################
-# ## encrypt the string and return the character
-# def encrypt_password(password_to_encrypt):
-#     key1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w',
-#      'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-#      'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '!', '"', '#', '$', '%', '&', "'",
-#      '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|',
-#      '}', '~']
-#     key2 = ['p', '*', 'Q', '5', 'K', '}', '?', 'x', '%', 'W', '0', '@', '-', '^', 's', 'c', 'V', '7', '>', 'C', 'J', 'B',
-#             'r', 'w', 'E', '\\', 'o', 'U', 'f', 'M', '`', 'q', '3', '&', '9', 'P', ':', '1', '[', '"', "'", '6', 'H', 'F',
-#             ']', 'u', 'S', 'a', 'O', '!', 'b', '#', 'D', 'l', 'n', 't', '<', 'z', 'I', ';', '~', '_', 'd', 'L', '{', 'm',
-#             'h', '/', 'Z', 'e', 'g', '.', ',', 'i', 'y', 'N', 'v', 'j', '(', '=', '8', 'k', 'R', '$', '+', 'Y', 'A', '|',
-#             '2', 'X', ')', '4', 'T', 'G']
-#
-#     #
-#     # key1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
-#     #         'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '!', '@', '#', '$', '%', '^',
-#     #         '&', '*', '(', ')', '+', '=', '[', ']', '{', '}', '\\', '|', ';', ':', '"', "'", '<', ',', '>', '.', '?',
-#     #         '/']
-#     # key2 = [';', '!', '&', 'v', '(', 'k', 'i', 'o', '8', '+', '5', '4', '%', '/', "'", '?', 'e', 'q', ']', 'j', 't',
-#     #         '[', '"', '$', 'g', '{', '|', 'w', 'x', 'd', 'b', '7', '}', 'y', '>', '1', '.', '9', '2', '#', '\\', 'p',
-#     #         ':', '*', 'u', 'c', 'f', '=', '^', 'h', 'n', 'm', '3', 'z', ',', '@', 'a', '0', 'l', '<', 's', '6', ')',
-#     #         'r']
-#
-#
-#     encrypted_string = ''
-#     for character in password_to_encrypt:
-#         index = key1.index(character) ## get index of character in key1
-#         encrypting = key2[index] ## return char in same index of key2
-#         encrypted_string += encrypting ## add to string
-#     #print(encrypted_string)
-#     return encrypted_string
-#
-#
-# ## decrypt the password string
-# def decryptor(password_to_decrypt):
-#     key1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w',
-#      'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-#      'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '!', '"', '#', '$', '%', '&', "'",
-#      '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|',
-#      '}', '~']
-#     key2 = ['p', '*', 'Q', '5', 'K', '}', '?', 'x', '%', 'W', '0', '@', '-', '^', 's', 'c', 'V', '7', '>', 'C', 'J', 'B',
-#     'r', 'w', 'E', '\\', 'o', 'U', 'f', 'M', '`', 'q', '3', '&', '9', 'P', ':', '1', '[', '"', "'", '6', 'H', 'F',
-#     ']', 'u', 'S', 'a', 'O', '!', 'b', '#', 'D', 'l', 'n', 't', '<', 'z', 'I', ';', '~', '_', 'd', 'L', '{', 'm',
-#     'h', '/', 'Z', 'e', 'g', '.', ',', 'i', 'y', 'N', 'v', 'j', '(', '=', '8', 'k', 'R', '$', '+', 'Y', 'A', '|',
-#     '2', 'X', ')', '4', 'T', 'G']
-#
-#
-#     decrypted_string = ''
-#     for character in password_to_decrypt:
-#         index = key2.index(character)
-#         decrypting = key1[index]
-#         decrypted_string += decrypting
-#
-#     return decrypted_string
-
-########################################
-########## ARCHIVED ###############
-########################################
-
-
 
 ## add account and password to opened file; works if data already exists
 def add_to_file(fn, account,password):
@@ -280,8 +217,6 @@ def new_user_check():
     ## check if user_file exists
 
 
-
-
     ## if file already exists, skip to ask what user wants to do step
     if os.path.exists(fn) is True:
 
@@ -316,12 +251,6 @@ def new_user_check():
             sys.exit()
 
 
-
-
-
-
-
-
     ## if user file doesnt exist, create one and add password to access it in the future
     else:
         open(fn, 'w')
@@ -348,8 +277,6 @@ def add_key_to_json(fn,keylist):
         f.write(json.dumps(keylist))
 
 
-
-
 ## update key1.json
 def update_key1():
     add_key_to_json('key1.json', originalKey())
@@ -358,20 +285,6 @@ def update_key1():
 ## update key2.json
 def update_key2():
     add_key_to_json('key2.json', generate_new_encryption())
-
-
-
-# add_dummy_data()
-
-
-# ## test the encryption and decryption
-# for items in 'nar3uto6!@#':
-#     print(encrypt_password(items))
-# print('\n===========')
-# for items in ':^>s0{Dck(H':
-#     print(decryptor(items))
-
-
 
 
 fn = new_user_check()
